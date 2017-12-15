@@ -1,0 +1,7 @@
+SSH加密
+第一步，创建SSH Key。ssh-keygen -t rsa -C "landy.lxa@aliyun.com"，生成id_rsa和id_rsa.pub两个文件
+第二步, 将SSH Key加入到ssh-agent。eval $(ssh-agent -s)启动Agent，ssh-add ~/.ssh/id_rsa
+第三步，在github账户中加入ssh key
+
+git remote add origin git@github.com:landy-lxa/test.git
+git push origin master
